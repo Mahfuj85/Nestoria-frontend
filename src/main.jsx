@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")).render(
     domain="dev-mahfuj.us.auth0.com"
     clientId="3jMGEbxuOdhbXCv8Uc3S9mise0DUiH6K"
     authorizationParams={{
-      redirect_uri: "http://localhost:5173",
+      redirect_uri: "https://nestoria-frontend.vercel.app",
     }}
     audience="http://localhost:3000"
     scope="openid profile email"
