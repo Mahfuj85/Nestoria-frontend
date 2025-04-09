@@ -6,3 +6,6 @@
 4. Auth0 used for login, token system
 5. React-query used for data query
 6. Axios used for data fetch
+
+
+Live Vercel link: https://nestoria-frontend.vercel.app
