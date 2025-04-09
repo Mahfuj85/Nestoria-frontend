@@ -1,0 +1,165 @@
+
+
+/* .card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 600px;
+    background-color: black;
+    cursor: pointer;
+    overflow: visible;
+} */
+.card {
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: visible; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 80px;
+  }
+
+.basicInfo{
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+}
+/* .card .img{
+    position: relative;
+    z-index: 1;
+}
+.card .img img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: .5s;
+    border-radius: 10px;
+    object-fit: cover;
+} */
+.card .img {
+    width: 100%;
+    height: 270px;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    transform: scale(1);
+    transition: .5s;
+  }
+  
+  .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    /* transform: scale(1);
+    transition: .5s; */
+    border-radius: 10px;
+  }
+  
+.info{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    color: #eee;
+}
+.info .stars,
+.info .price{
+    display: flex;
+}
+.info .price{
+    float: right;
+    color: #eee;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.info .stars{
+    color: rgb(200, 200, 0);
+}
+.wish{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wish .icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(57, 128, 241);
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: 90px;
+    bottom: -25px;
+    border: 5px solid black;
+    transition: .5s;
+    padding: 5px;
+    opacity: 0;
+    transform: translate(0, 10px);
+}
+.wish .icon {
+    left: 150px; 
+  }
+  
+  /* .wish .icon:nth-child(2) {
+    right: 60px; 
+  } */
+.wish::after,
+.wish::before{
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    width: 58px;
+    height: 34px;
+    content: '';
+    right: 47px;
+    transform: translate(0, 10px);
+    border-bottom-left-radius: 55%;
+    box-shadow: 0px 20px 0 0px black;
+    opacity: 0;
+    transition: .5s;
+    transform: translate(0, 10px);
+}
+.wish::after{
+    right: unset;
+    left: 97px;
+    bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 55%;
+}
+.wish::before{
+    left: unset;
+    right: 147px;
+    bottom: 0px;
+    border-bottom-left-radius: 55%;
+    border-bottom-right-radius: 0;
+}
+.card:hover .img {
+    transform: translateY(-10px);
+    border-radius: 30px;
+}
+/* .card:hover .img img {
+    transform: translateY(-10px);
+    border-radius: 30px;
+} */
+.card:hover .wish .icon{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.card:hover .wish::after{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.card:hover .wish::before{
+    opacity: 1;
+    transform: translate(0, 0);
+}
